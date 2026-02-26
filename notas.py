@@ -6,3 +6,16 @@ estudiantes = [
 ]
 print("--- Datos cargados ---")
 print(f"Total de estudiantes: {len(estudiantes)}")
+
+def calcular_promedio(lista_notas):
+    if len(lista_notas) == 0:
+        return 0
+    
+    suma = 0
+    for nota in lista_notas:
+        suma += nota
+    
+    promedio = suma / len(lista_notas)
+    return promedio
+
+print("Prueba promedio Maria", calcular_promedio(estudiantes[1]["Notas"]))
