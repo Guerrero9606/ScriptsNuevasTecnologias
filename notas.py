@@ -6,3 +6,19 @@ estudiantes = [
 ]
 print("--- Datos cargados ---")
 print(f"Total de estudiantes: {len(estudiantes)}")
+
+def reporte(estudiantes):
+    print("---REPORTE FINAL---")
+    for est in estudiantes:
+        suma = sum(est["Notas"])
+        prom = suma / len(est["Notas"])
+
+        if prom >= 3.0:
+            estado = "APROBADO"
+        else:
+            estado = "REPROBADO"
+
+        print(f"Estudiante: {est["Nombre"]} su estado es: {estado}")
+
+
+reporte(estudiantes)
